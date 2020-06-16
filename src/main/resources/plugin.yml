@@ -1,0 +1,12 @@
+name: "Windrose"
+version: ${project.version}
+main: ca.ranguli.windrose.Windrose
+api-version: "1.15"
+prefix: windrose
+authors: [ranguli]
+description: A tool for management of coordinates
+website: https://github.com/ranguli/windrose
+commands:
+  loc:
+    description: Show the player their current location
+    usage: /loc - Shows your coordinates!
