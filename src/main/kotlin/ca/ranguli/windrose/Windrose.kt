@@ -1,13 +1,14 @@
 package ca.ranguli.windrose
 
+import kotlin.math.roundToInt
+
 import org.bukkit.plugin.java.JavaPlugin
-
-
 import org.bukkit.entity.Player
-
+import org.bukkit.ChatColor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
+
 
 class Windrose : JavaPlugin(), CommandExecutor {
 
@@ -18,7 +19,10 @@ class Windrose : JavaPlugin(), CommandExecutor {
 
     override fun onCommand(sender: CommandSender, command: Command, commandLabel: String, args: Array<String>): Boolean {
         if (sender is Player) {
-            logger.info(sender.name)
+            val x = sender.location.x.roundToInt()
+            val y = sender.location.y.roundToInt()
+
+            sender.sendMessage("${ChatColor.GREEN}$x, $y")
         } else {
             sender.sendMessage("This command can only be run by a player.")
         }
