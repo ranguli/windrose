@@ -1,6 +1,6 @@
 name: "Windrose"
 version: ${project.version}
-main: ca.ranguli.windrose.Windrose
+main: li.rangu.windrose.Windrose
 api-version: "1.15"
 prefix: windrose
 authors: [ranguli]
