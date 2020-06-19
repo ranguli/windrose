@@ -48,8 +48,8 @@ abstract class CommandBase<P : Plugin?>
      * CommandBase if further command nesting is desired.
      */
 
-    fun registerSubCommand(label: String, subCommand: CommandExecutor) {
-        subCommands.put(label.toLowerCase(), subCommand)
+    fun registerSubCommand(subCommand: CommandExecutor) {
+        subCommands.put(subCommand.name.toLowerCase(), subCommand)
     }
 
 

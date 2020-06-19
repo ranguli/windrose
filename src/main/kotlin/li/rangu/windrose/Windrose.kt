@@ -17,13 +17,15 @@ class Windrose : JavaPlugin(), CommandExecutor {
 
         val commandLocPost = CommandLocPost(this, "post")
 
-        locCommand.registerSubCommand("post", commandLocPost)
+        logger.info(commandLocPost.name)
+
+        locCommand.registerSubCommand(commandLocPost)
 
         // Register "/check this out" with the sub command "/check this".
         // checkThisCommand.registerSubCommand("out", CheckThisOutCommand())
 
         // Register "/check" command executor with Bukkit.
-        getCommand("loc")?.setExecutor(locCommand)
+        getCommand(locCommand.name)?.setExecutor(locCommand)
     }
 
     override fun onDisable() {

@@ -5,7 +5,7 @@ import org.bukkit.entity.Player
 import org.bukkit.ChatColor
 import org.bukkit.command.CommandSender
 
-class CommandLoc(plugin: Windrose?, name: String) : CommandBase<Windrose?>(plugin) {
+class CommandLoc(plugin: Windrose?, name: String) : CommandBase<Windrose?>(plugin, name) {
 
 
     override fun onCommand(sender: CommandSender, command: Command, commandLabel: String, args: Array<String>): Boolean {
